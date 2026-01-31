@@ -38,7 +38,7 @@ function generateQuestion() {
 
     const r = ranges[currentLevel];
 
-    switch(op) {
+    switch (op) {
         case '+':
             num1 = getRandomInt(1, r.add);
             num2 = getRandomInt(1, r.add);
@@ -64,7 +64,7 @@ function generateQuestion() {
     topRow.textContent = num1;
     bottomNumberEl.textContent = num2;
     operatorEl.textContent = op;
-    
+
     input.value = '';
     input.focus();
     message.textContent = '';
@@ -75,7 +75,7 @@ function checkAnswer() {
     if (userAnswer === '') return;
 
     const isCorrect = parseFloat(userAnswer) === currentAnswer;
-    
+
     if (isCorrect) {
         message.textContent = 'Correct!';
         message.className = 'correct';
@@ -84,7 +84,7 @@ function checkAnswer() {
         message.className = 'wrong';
     }
 
-    setTimeout(generateQuestion, 50);
+    setTimeout(generateQuestion, 500);
 }
 
 input.addEventListener('keydown', (e) => {
