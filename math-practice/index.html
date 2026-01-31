@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="selector-bar">
+            <button class="op-btn selected" data-op="+">+</button>
+            <button class="op-btn selected" data-op="-">-</button>
+            <button class="op-btn selected" data-op="×">×</button>
+            <button class="op-btn selected" data-op="÷">÷</button>
+        </div>
+
+        <div id="problem" class="problem">
+            <div class="top-row"></div>
+            <div class="bottom-row">
+                <span class="operator"></span>
+                <span class="bottom-number"></span>
+            </div>
+            <div class="bar"></div>
+            <input type="number" id="answer" autocomplete="off" autofocus>
+        </div>
+
+        <div id="message"></div>
+
+        <div class="level-bar">
+            <button class="level-btn" data-level="easy">Easy</button>
+            <button class="level-btn selected" data-level="medium">Medium</button>
+            <button class="level-btn" data-level="hard">Hard</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
